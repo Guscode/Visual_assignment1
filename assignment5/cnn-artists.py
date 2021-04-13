@@ -47,12 +47,17 @@ def main():
     #Let users define # of epochs
     ap.add_argument("-e","--epochs", default = 10,type = int,
                     help="Specify amount of epochs, default: 10" )
+    
+    ap.add_argument("-t","--training_path", required=True,type = str,
+                    help="Specify training path" )
+    ap.add_argument("-v","--validation_path", required=True,type = str,
+                    help="Specify validation path" )
 
     #parse arguments
     args = vars(ap.parse_args())
     
     #Path to training data
-    train_path = "../data/impressionist/training"
+    train_path = args["training_path"]
     
     #Listing artists
     artists = os.listdir(train_path)
@@ -72,7 +77,7 @@ def main():
 
     
     #same process for testing data
-    test_path = "../data/impressionist/validation"
+    test_path = args["validation_path"]
     
     #Empty lists for storing testing image paths and Y values
     test_img=[]
