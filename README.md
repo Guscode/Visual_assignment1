@@ -43,3 +43,10 @@ in nn-mnist you're able to specify:
 ```
 python src/nn-mnist.py -m mnist_mini.csv -ts 0.1 -t test.png -s outputs
 ```
+
+# Visual Assignment 5
+I created a .py script which can be run using the cv101 virtual environment on worker02.
+You can specify:
+- --training_path -t: path to training folder
+- --validation_path -v: path to validation folder
+- --epochs -e: number of epochs 
